@@ -10,7 +10,8 @@ class CategoriesScreen extends StatelessWidget {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (ctx) => MealsScreen(title: 'Some catoegory', meals: []),
+          builder: (ctx) =>
+              const MealsScreen(title: 'Some catoegory', meals: []),
         ));
   }
 
@@ -28,7 +29,12 @@ class CategoriesScreen extends StatelessWidget {
         children: [
           //availableCategories.map((catergory) => CategoryGridItem(category: category)).toList()
           for (final category in availableCategories)
-            CategoryGridItem(category: category)
+            CategoryGridItem(
+              category: category,
+              onSelectCategory: () {
+                _selectCategory(context);
+              },
+            )
         ],
       ),
     );
