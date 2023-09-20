@@ -65,7 +65,7 @@ class MainDraw extends StatelessWidget {
                 .copyWith(color: Theme.of(context).colorScheme.primary),
           ),
           onTap: () {
-            onSelectScreen('filers');
+            onSelectScreen('filter');
           },
         )
       ]),
